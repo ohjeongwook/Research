@@ -1,0 +1,53 @@
+## Samsung KNOX Feature
+
+* Realtime Kernel Protection (RKP) (v2.4 ~ )
+* Secure Boot (v2.4 ~ )
+* Kernel address space layout randomization (v2.6 ~ )
+* Protection from JOP exploits (v2.7 ~ )
+* Protection from ROP exploits (v2.8 ~ )
+
+[Knox features on Android](https://www.samsungknox.com/en/knox-features/android)
+
+## Realtime Kernel Protection (RKP) (v2.4 ~ )
+  * RKP prevents running unauthorized privileged code on the system and kernel data from being directly accessed by user processes.  Also, it monitors some critical kernel data structures to verify that they are not exploited by attacks.
+
+[Real-time Kernel Protection (RKP)](https://www.samsungknox.com/en/blog/real-time-kernel-protection-rkp)
+
+## Realtime Kernel Protection (RKP)
+
+* RKP runs in the virtualization protected environment rather than TrustZone Secure World
+
+[Real-time Kernel Protection (RKP)](https://www.samsungknox.com/en/blog/real-time-kernel-protection-rkp)
+
+## Realtime Kernel Protection (RKP)
+
+![rkp_0](https://cdn.samsungknox.com/knoxportal/files/rkp_0.png "rkp_0")
+
+## Realtime Kernel Protection (RKP)
+
+* RKP ensures that translation tables cannot be modified by the Normal World through making them read-only to the Normal World kernel. Hence, the only way for the kernel to update the translation tables is to request these updates from RKP. As a result, RKP guarantees that this interception is non-bypassable.
+
+[Real-time Kernel Protection (RKP)](https://www.samsungknox.com/en/blog/real-time-kernel-protection-rkp)
+  
+## Secure Boot (v2.4 ~ )
+  * Secure Boot is a security mechanism that prevents unauthorized boot loaders and kernels from being loaded during the startup process.  Firmware images, such as operating systems and system components, cryptographically signed by known, trusted authorities, are considered authorized firmware.
+
+## Kernel address space layout randomization (v2.6 ~ )
+   * The Knox platform ensures that the memory address of kernel data structures and code are randomized from one device to another.
+
+### Bypass KASLR
+ * Readable TIMA logs
+``` 
+/proc/tima_debug_log
+/proc/tima_debug_rkp_log
+/proc/tima_secure_rkp_log
+```
+
+[Defeating Samsung KNOX with zero privilege](https://www.blackhat.com/docs/us-17/thursday/us-17-Shen-Defeating-Samsung-KNOX-With-Zero-Privilege.pdf)
+   
+## Protection from JOP exploits (v2.7 ~ )
+  * Knox now prevents Jump-Oriented Programming (JOP) attacks, such as those enabled by the Ping Pong APK. JOP attacks use jump instructions to control, or modify, the kernel flow and modify system-critical data.
+
+## Protection from ROP exploits (v2.8 ~ )
+  * The Knox platform prevents Return Oriented Programming (ROP) exploits. This enhancement restricts an attacker’s ability to hijack the control-flow of an OS kernel by encrypting return addresses before putting them on the stack.
+  
