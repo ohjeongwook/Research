@@ -38,7 +38,7 @@ KNOX 2.6
    * bp_cred: pointer to this context's owner cred
 
 ## Bypasses
-* [orderly_poweroff​ Bypass](KernelToUser.md#orderly_poweroff​ Bypass)
+* [orderly_poweroff​ Bypass](KernelToUser.md#orderly_poweroff-bypass)
 
 # References
 
