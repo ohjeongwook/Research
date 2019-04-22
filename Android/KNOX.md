@@ -34,10 +34,10 @@
 Details: [KDFI](KDFI.md)
 
 ## Secure Boot (v2.4 ~ )
-  * Secure Boot is a security mechanism that prevents unauthorized boot loaders and kernels from being loaded during the startup process.  Firmware images, such as operating systems and system components, cryptographically signed by known, trusted authorities, are considered authorized firmware.
+* Secure Boot is a security mechanism that prevents unauthorized boot loaders and kernels from being loaded during the startup process.  Firmware images, such as operating systems and system components, cryptographically signed by known, trusted authorities, are considered authorized firmware.
 
 ## Kernel address space layout randomization (v2.6 ~ )
-   * The Knox platform ensures that the memory address of kernel data structures and code are randomized from one device to another.
+* The Knox platform ensures that the memory address of kernel data structures and code are randomized from one device to another.
 
 ### Bypass KASLR
 
@@ -53,10 +53,14 @@ Details: [KDFI](KDFI.md)
  Reference: [Defeating Samsung KNOX with zero privilege](https://www.blackhat.com/docs/us-17/thursday/us-17-Shen-Defeating-Samsung-KNOX-With-Zero-Privilege.pdf)
 
 ## Protection from JOP exploits (v2.7 ~ )
-  * Knox now prevents Jump-Oriented Programming (JOP) attacks, such as those enabled by the Ping Pong APK. JOP attacks use jump instructions to control, or modify, the kernel flow and modify system-critical data.
+
+* Knox now prevents Jump-Oriented Programming (JOP) attacks, such as those enabled by the Ping Pong APK. JOP attacks use jump instructions to control, or modify, the kernel flow and modify system-critical data.
+
+* JOPP: Jump Oriented Programming Protection
 
 ## Protection from ROP exploits (v2.8 ~ )
-  * The Knox platform prevents Return Oriented Programming (ROP) exploits. This enhancement restricts an attacker’s ability to hijack the control-flow of an OS kernel by encrypting return addresses before putting them on the stack.
+
+* The Knox platform prevents Return Oriented Programming (ROP) exploits. This enhancement restricts an attacker’s ability to hijack the control-flow of an OS kernel by encrypting return addresses before putting them on the stack.
   
 # Examples
 

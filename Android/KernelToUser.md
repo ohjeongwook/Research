@@ -5,8 +5,8 @@
 
 [Exploit Methods/Userspace execution](https://kernsec.org/wiki/index.php/Exploit_Methods/Userspace_execution)
 
-## PXN
-### PXN: Privilege Execute Never
+## PXN (Privilege eXecute Never)
+### PXN
 
 * Make userspace non-executable for the kernel
 
@@ -71,6 +71,9 @@ static​ int​ __orderly_poweroff​ (bool​ ​ force)
 ```
 
 #### orderly_poweroff() bypass
+
+* If we can overwrite one of these pre-defined strings and then invoke its respective function, we should be able to execute an arbitrary command in user-mode, with existing code doing all the heavy lifting for us - [Exploiting BlueBorne in Linux-based IoT devices](https://go.armis.com/hubfs/ExploitingBlueBorneLinuxBasedIoTDevices.pdf) - 2017
+
 * Call orderly_poweroff()
    -> __orderly_poweroff -> call_usermodehelper -> char poweroff_cmd[] "/sbin/poweroff"
    * char poweroff_cmd[] is +W
