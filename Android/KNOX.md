@@ -6,18 +6,18 @@
 * Protection from JOP exploits (v2.7 ~ )
 * Protection from ROP exploits (v2.8 ~ )
 
- - [Knox features on Android](https://www.samsungknox.com/en/knox-features/android)
+ Reference: [Knox features on Android](https://www.samsungknox.com/en/knox-features/android)
 
 ## Realtime Kernel Protection (RKP) (v2.4 ~ )
   * RKP prevents running unauthorized privileged code on the system and kernel data from being directly accessed by user processes.  Also, it monitors some critical kernel data structures to verify that they are not exploited by attacks.
 
- - [Real-time Kernel Protection (RKP)](https://www.samsungknox.com/en/blog/real-time-kernel-protection-rkp)
+ Reference: [Real-time Kernel Protection (RKP)](https://www.samsungknox.com/en/blog/real-time-kernel-protection-rkp)
 
 ## Realtime Kernel Protection (RKP)
 
 * RKP runs in the virtualization protected environment rather than TrustZone Secure World
 
- - [Real-time Kernel Protection (RKP)](https://www.samsungknox.com/en/blog/real-time-kernel-protection-rkp)
+ Reference: [Real-time Kernel Protection (RKP)](https://www.samsungknox.com/en/blog/real-time-kernel-protection-rkp)
 
 ## Realtime Kernel Protection (RKP)
 
@@ -27,7 +27,7 @@
 
 * RKP ensures that translation tables cannot be modified by the Normal World through making them read-only to the Normal World kernel. Hence, the only way for the kernel to update the translation tables is to request these updates from RKP. As a result, RKP guarantees that this interception is non-bypassable.
 
- - [Real-time Kernel Protection (RKP)](https://www.samsungknox.com/en/blog/real-time-kernel-protection-rkp)
+ Reference: [Real-time Kernel Protection (RKP)](https://www.samsungknox.com/en/blog/real-time-kernel-protection-rkp)
 
 ### [KDFI](KDFI.md)
 
@@ -48,7 +48,7 @@
 /proc/tima_secure_rkp_log
 ```
 
- - [Defeating Samsung KNOX with zero privilege](https://www.blackhat.com/docs/us-17/thursday/us-17-Shen-Defeating-Samsung-KNOX-With-Zero-Privilege.pdf)
+ Reference: [Defeating Samsung KNOX with zero privilege](https://www.blackhat.com/docs/us-17/thursday/us-17-Shen-Defeating-Samsung-KNOX-With-Zero-Privilege.pdf)
 
 ## Protection from JOP exploits (v2.7 ~ )
   * Knox now prevents Jump-Oriented Programming (JOP) attacks, such as those enabled by the Ping Pong APK. JOP attacks use jump instructions to control, or modify, the kernel flow and modify system-critical data.
@@ -62,10 +62,10 @@
 
 Arbitrary Kernel Memory Overwriting -> Overwrite ptmx_fops -> Overwrite address_limit -> Overwrite uid, security id and selinux_enforcing
 
- - [Defeating Samsung KNOX with zero privilege](https://www.blackhat.com/docs/us-17/thursday/us-17-Shen-Defeating-Samsung-KNOX-With-Zero-Privilege.pdf)
+ Reference: [Defeating Samsung KNOX with zero privilege](https://www.blackhat.com/docs/us-17/thursday/us-17-Shen-Defeating-Samsung-KNOX-With-Zero-Privilege.pdf)
 
 ## LPE flow on Galaxy S7 Edge
 
 Bypass KASLR -> Arbitrary Kernel Memory Overwriting -> Overwrite ptmx_fops -> Overwrite address_limit -> Bypass DFI -> Bypass SELinux for Samsung -> Gain Root privilege
 
- - [Defeating Samsung KNOX with zero privilege](https://www.blackhat.com/docs/us-17/thursday/us-17-Shen-Defeating-Samsung-KNOX-With-Zero-Privilege.pdf)
+ Reference: [Defeating Samsung KNOX with zero privilege](https://www.blackhat.com/docs/us-17/thursday/us-17-Shen-Defeating-Samsung-KNOX-With-Zero-Privilege.pdf)
