@@ -1,11 +1,11 @@
 # Kernel to User-mode
-## PXN
-### ret2user
+## ret2user
 
 * The place where attackers have the most control over memory layout tends to be in userspace, so it has been natural to place malicious code in userspace and have the kernel redirection execution there.
 
 [Exploit Methods/Userspace execution](https://kernsec.org/wiki/index.php/Exploit_Methods/Userspace_execution)
 
+## PXN
 ### PXN: Privilege Execute Never
 
 * Make userspace non-executable for the kernel
@@ -27,11 +27,12 @@
 
 [The Android Platform Security Model](https://arxiv.org/pdf/1904.05572.pdf)
 
+## PXN Bypasses
 ### call_usermodehelper bypass
 * call_usermodehelper(path,argv,envp,wait)
    * via ptmx_fops->check_flags(flag)
 
-* user-mode​ ​ helpe: run user mode commands from kernel
+* user-mode​​ helper: run user mode commands from kernel
 ```
 int​ call_usermodehelper​ (const​ ​ char​ ​ *​ ​ path,
     char​ ​ **​ ​ argv,
@@ -39,7 +40,20 @@ int​ call_usermodehelper​ (const​ ​ char​ ​ *​ ​ path,
     int​ ​ wait); 
 ```
 
-### run_cmd
+#### References
+
+* [New Reliable Android Kernel Root Exploitation Techniques](http://powerofcommunity.net/poc2016/x82.pdf) - 2016
+   p. 24 ~ 31
+   
+### orderly_poweroff​ Bypass
+
+* [Exploiting BlueBorne in Linux-based IoT devices](https://go.armis.com/hubfs/ExploitingBlueBorneLinuxBasedIoTDevices.pdf) - 2017
+
+* [Exploiting BlueBorne in Linux-based IoT devices - WP](https://www.blackhat.com/docs/eu-17/materials/eu-17-Seri-BlueBorne-A-New-Class-Of-Airborne-Attacks-Compromising-Any-Bluetooth-Enabled-Linux-IoT-Device-wp.pdf) - 2017
+
+
+#### run_cmd
+
 ```
 static​ int​ run_cmd​ (const​ ​ char​ ​ *cmd)
 {
@@ -47,16 +61,7 @@ static​ int​ run_cmd​ (const​ ​ char​ ​ *cmd)
 } 
 ```
 
-### call_usermodehelper bypass
-
-* [New Reliable Android Kernel Root Exploitation Techniques](http://powerofcommunity.net/poc2016/x82.pdf) - 2016
-   p. 24 ~ 31
-
-* [Exploiting BlueBorne in Linux-based IoT devices](https://go.armis.com/hubfs/ExploitingBlueBorneLinuxBasedIoTDevices.pdf) - 2017
-
-* [Exploiting BlueBorne in Linux-based IoT devices - WP](https://www.blackhat.com/docs/eu-17/materials/eu-17-Seri-BlueBorne-A-New-Class-Of-Airborne-Attacks-Compromising-Any-Bluetooth-Enabled-Linux-IoT-Device-wp.pdf) - 2017
-
-### orderly_poweroff​
+#### orderly_poweroff​
 
 ```
 static​ int​ __orderly_poweroff​ (bool​ ​ force) 
@@ -65,7 +70,7 @@ static​ int​ __orderly_poweroff​ (bool​ ​ force)
 } 
 ```
 
-### orderly_poweroff() bypass
+#### orderly_poweroff() bypass
 * Call orderly_poweroff()
    -> __orderly_poweroff -> call_usermodehelper -> char poweroff_cmd[] "/sbin/poweroff"
    * char poweroff_cmd[] is +W
