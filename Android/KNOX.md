@@ -68,6 +68,6 @@ Arbitrary Kernel Memory Overwriting -> Overwrite ptmx_fops -> Overwrite address_
 
 ## LPE flow on Galaxy S7 Edge
 
-Bypass KASLR -> Arbitrary Kernel Memory Overwriting -> Overwrite ptmx_fops -> Overwrite address_limit -> Bypass DFI -> Bypass SELinux for Samsung -> Gain Root privilege
+<b>Bypass KASLR</b> -> Arbitrary Kernel Memory Overwriting -> Overwrite ptmx_fops -> Overwrite address_limit -> <b>Bypass DFI</b> -> <b>Bypass SELinux for Samsung</b> -> Gain Root privilege
 
  Reference: [Defeating Samsung KNOX with zero privilege](https://www.blackhat.com/docs/us-17/thursday/us-17-Shen-Defeating-Samsung-KNOX-With-Zero-Privilege.pdf)

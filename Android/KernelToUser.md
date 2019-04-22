@@ -1,11 +1,6 @@
 ## Kernel to User-mode
 
 ### call_usermodehelper bypass
-
-p. 24 ~ 31
-[New Reliable Android Kernel Root Exploitation Techniques](http://powerofcommunity.net/poc2016/x82.pdf) - 2016
-
-### call_usermodehelper bypass
 * call_usermodehelper(path,argv,envp,wait)
    * via ptmx_fops->check_flags(flag)
 
@@ -24,6 +19,12 @@ static​ int​ run_cmd​ (const​ ​ char​ ​ *cmd)
     ...​ ​ //​ ​ argv_split​ ​ and​ ​ call_usermodehelper 
 } 
 ```
+
+### call_usermodehelper bypass
+
+p. 24 ~ 31
+[New Reliable Android Kernel Root Exploitation Techniques](http://powerofcommunity.net/poc2016/x82.pdf) - 2016
+
 
 ### orderly_poweroff​
 
