@@ -38,8 +38,7 @@
   
   * Bypass: 높은 권한(커널 쓰레드)의 자식 프로세스로 실행되는 수평적인 권한 상승 공격은 탐지를 실패는.. 간단한 아이디어(POC 2016)로 우회 된다는 점
           
-## KDFI: Kernel Data Control Flow Integrity
-  * KNOX의 KDFI 적용으로 인한 보호 대상 범위를 구지 건들지 않더라도 권한 상승이 충분히 가능하다는 점
+
 
 ## JOPP: Jump Oriented Programming Protection
   * 간단한 아이디어(복사 함수 역할을 하는 새로운 gadget)로 우회했다는 점

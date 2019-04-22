@@ -1,3 +1,6 @@
+# KDFI: Kernel Data Control Flow Integrity
+  * Protects important kernel data structures
+
 ## Kernel object protection
 
 * S6

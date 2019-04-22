@@ -12,13 +12,6 @@ PXN - Privileged eXecute Never - mitigate ret2user
  
 ## Kernel data protection
 
-## Common LPE flow on Android
-Arbitrary Kernel Memory Overwriting -> Overwrite ptmx_fops -> Overwrite address_limit -> Overwrite uid, security id and selinux_enforcing
-
-## LPE flow on Galaxy S7 edge
-Bypass KASLR -> Arbitrary Kernel Memory Overwriting -> Overwrite ptmx_fops -> Overwrite address_limit -> Bypass DFI -> Bypass SELinux for Samsung -> Gain Root privilege
-
-
 ### Arbitrary Kernel Memory Overwriting 
 * CVE-2016-6787
 
