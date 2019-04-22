@@ -49,9 +49,12 @@ static​ int​ run_cmd​ (const​ ​ char​ ​ *cmd)
 
 ### call_usermodehelper bypass
 
-p. 24 ~ 31
-[New Reliable Android Kernel Root Exploitation Techniques](http://powerofcommunity.net/poc2016/x82.pdf) - 2016
+* [New Reliable Android Kernel Root Exploitation Techniques](http://powerofcommunity.net/poc2016/x82.pdf) - 2016
+   p. 24 ~ 31
 
+* [Exploiting BlueBorne in Linux-based IoT devices](https://go.armis.com/hubfs/ExploitingBlueBorneLinuxBasedIoTDevices.pdf) - 2017
+
+* [Exploiting BlueBorne in Linux-based IoT devices - WP](https://www.blackhat.com/docs/eu-17/materials/eu-17-Seri-BlueBorne-A-New-Class-Of-Airborne-Attacks-Compromising-Any-Bluetooth-Enabled-Linux-IoT-Device-wp.pdf) - 2017
 
 ### orderly_poweroff​
 
