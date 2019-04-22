@@ -9,9 +9,6 @@
    tsec_jar: securitycontext
    vfsmnt_cache: struct vfsmount
 
-[Defeating Samsung KNOX
-with zero privilege](https://www.blackhat.com/docs/us-17/thursday/us-17-Shen-Defeating-Samsung-KNOX-With-Zero-Privilege-wp.pdf)
-
 ## Kernel object protection
    cred_jar_ro -> rkp_override_creds()
 
@@ -39,3 +36,11 @@ KNOX 2.6
 ## Data Flow Integrity
 * struct task_security_struct{}
    * bp_cred: pointer to this context's owner cred
+
+## Bypasses
+* [orderly_poweroff​ Bypass](KernelToUser.md#orderly_poweroff​ Bypass)
+
+# References
+
+[Defeating Samsung KNOX
+with zero privilege](https://www.blackhat.com/docs/us-17/thursday/us-17-Shen-Defeating-Samsung-KNOX-With-Zero-Privilege-wp.pdf)

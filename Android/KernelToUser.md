@@ -76,4 +76,4 @@ static​ int​ __orderly_poweroff​ (bool​ ​ force)
 
 * Call orderly_poweroff()
    -> __orderly_poweroff -> call_usermodehelper -> char poweroff_cmd[] "/sbin/poweroff"
-   * char poweroff_cmd[] is +W
+   * char poweroff_cmd[] is +W ([KDFI](KDFI.md) bypass)
