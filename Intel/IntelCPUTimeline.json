@@ -1,0 +1,353 @@
+{
+    "title": {
+        "media": {
+          "url": "",
+          "caption": "",
+          "credit": ""
+        },
+        "text": {
+          "headline": "History of Intel CPU Security Features & Attacks",
+          "text": "<p></p>"
+        }
+    },
+    "events": [
+        {
+            "start_date": {
+                "year": "2004",
+                "month": "2"
+            },
+            "text": {
+                "headline": "Prescott",
+                "text": "<p>XD bit (execute disable) feature introduced after AMD64 introduced XN (execute never) bit to the page table entry"
+            },
+            "group": "",
+            "background": "",
+            "media": {
+                "caption": "",
+                "credit": "",
+                "thumbnail": "http://www.chip-architect.org/news/Prescott_90_nm_die_text_1600x1200.jpg",
+                "url": "http://www.chip-architect.org/news/Prescott_90_nm_die_text_1600x1200.jpg"
+            }
+        },    
+        {
+            "start_date": {
+                "year": "2008",
+                "month": "11",
+                "day": "11"
+            },
+            "text": {
+                "headline": "Nehalem",
+                "text": "1st generation core<p>Hyper-threading reintroduced<p>Second-generation Intel Virtualization Technology, which introduced Extended Page Table support, etc<p>IOMMU Directed I/O (VT-d) introduced<p><a href=\"https://www.intel.com/content/dam/www/public/us/en/documents/white-papers/virtualization-enabling-intel-virtualization-technology-features-and-benefits-paper.pdf\" target=\"_blank\">Extended Page Table (EPT)</a> introduced<p>Provides 16 pairs of MSR to record LBR (Last Branch Record) information"
+            },
+            "group": "",
+            "background": "",
+            "media": {
+                "caption": "",
+                "credit": "",
+                "thumbnail": "https://upload.wikimedia.org/wikipedia/en/c/cc/Intel_Nehalem.jpg",
+                "url": "https://hothardware.com/articleimages/Item1122/big_slide2.jpg"
+            }
+        },
+        {
+            "start_date": {
+                "year": "2011",
+                "month": "",
+                "day": ""
+            },
+            "text": {
+                "headline": "Sandy Bridge",
+                "text": "2nd generation core<p><a href=\"https://www.howtogeek.com/56538/how-to-remotely-control-your-pc-even-when-it-crashes/\" target=\"_blank\">vPro remote-control</a> introduced"
+            },
+            "group": "",
+            "background": "",
+            "media": {
+                "caption": "",
+                "credit": "",
+                "thumbnail": "https://www.computerhope.com/jargon/s/sandy-bridge.jpg",
+                "url": "https://tpucdn.com/reviews/Intel/Core_i5_2500K_GPU/images/die.jpg"
+            }
+        },
+        {
+            "start_date": {
+                "year": "2012",
+                "month": "4",
+                "day": "29"
+            },
+            "text": {
+                "headline": "Ivy Bridge",
+                "text": "3rd generation core <p><a href=\"https://github.com/huku-/research/wiki/Intel-CPU-security-features#smep-supervisor-mode-execution-protection-pdf\" target=\"_blank\">SMEP(Supervisor Mode Execution Prevention)<p><a href=\"https://www.electronicdesign.com/learning-resources/understanding-intels-ivy-bridge-random-number-generator\" target=\"_blank\">RdRand instruction (Intel Secure Key)</a>"
+            },
+            "group": "",
+            "background": "",
+            "media": {
+                "caption": "",
+                "credit": "",
+                "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Intel_CPU_Core_i7_2600K_Sandy_Bridge_bottom.jpg",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Intel_Core_i5-3210M_SR0N0_BGA-1023.jpg/1707px-Intel_Core_i5-3210M_SR0N0_BGA-1023.jpg"
+            }
+        },
+        {
+            "start_date": {
+                "year": "2013",
+                "month": "6",
+                "day": "5"
+            },
+            "text": {
+                "headline": "Haswell",
+                "text": "4th generation core <p><a href=\"https://www.intel.com/content/dam/www/public/us/en/documents/white-papers/security-technologies-4th-gen-core-retail-paper.pdf\" target=\"_blank\">Intel Boot Guard</a><p>Transactional Synchronization Extensions (TSX-NI) introduced"
+            },
+            "group": "",
+            "background": "",
+            "media": {
+                "caption": "",
+                "credit": "",
+                "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Haswell_Chip.jpg/1764px-Haswell_Chip.jpg",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Haswell_Chip.jpg/1764px-Haswell_Chip.jpg"
+            }
+        },
+        {
+            "start_date": {
+                "year": "2014",
+                "month": "10",
+                "day": "27"
+            },
+            "text": {
+                "headline": "Broadwell",
+                "text": "5th generation core <p><a href=\"https://en.m.wikipedia.org/wiki/Supervisor_Mode_Access_Prevention\" target=\"_blank\">SMAP</a>: optionally disallows access from kernel-space memory to user-space memory<p>Processor Trace is available: <a href=\"https://software.intel.com/en-us/articles/intel-sdm\" target=\"_blank\">Intel Architecture Software Developer Manuals</a>, volume 3, chapter 36"
+            },
+            "group": "",
+            "background": "",
+            "media": {
+                "caption": "",
+                "credit": "",
+                "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/6/69/Intel_i7_6800k_cpu.jpg",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/6/69/Intel_i7_6800k_cpu.jpg"
+            }
+        },
+        {
+            "start_date": {
+                "year": "2015",
+                "month": "8"
+            },
+            "text": {
+                "headline": "Skylake",
+                "text": "6th generation core <p>Skylake is the last Intel platform on which Windows earlier than Windows 10 will be officially supported by Microsoft <p>Mode-Based Execute (MBE): an enhancement to the Extended Page Tables (EPT) that provides finer level of control of execute permissions.<p>Working Processor Trace is supported - most Processor Trace tools work on >= Skylake<p><a href=\"https://software.intel.com/en-us/sgx\" target=\"_blank\">SGX</a> is introduced<p>Xeon Scalable Family supports <a href=\"https://www.intel.com/content/dam/www/public/us/en/documents/white-papers/key-protection-technology-paper.pdf\" target=\"_blank\">Protection Key (aka MPK)</a><p><a href=\"https://software.intel.com/en-us/articles/introduction-to-intel-memory-protection-extensions\" target=\"_blank\">Intel Memory Protection Extensions (Intel MPX)</a>"
+            },
+            "group": "",
+            "background": "",
+            "media": {
+                "caption": "",
+                "credit": "",
+                "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Intel_CPU_Core_i7_6700K_Skylake_perspective.jpg/1838px-Intel_CPU_Core_i7_6700K_Skylake_perspective.jpg",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Intel_CPU_Core_i7_6700K_Skylake_perspective.jpg/1838px-Intel_CPU_Core_i7_6700K_Skylake_perspective.jpg"
+            }
+        },
+        {
+            "start_date": {
+                "year": "2016",
+                "month": "8",
+                "day": "30"
+            },
+            "text": {
+                "headline": "Kaby Lake",
+                "text": "<p>7th generation core <p>Windows HVCI (Hypevisor Code Integrity) support<p>Support for <a href=\"https://hjlebbink.github.io/x86doc/html/PTWRITE.html\" target=\"_blank\">PTWRITE</a> instruction to write data to an Intel Processor Trace packet stream "
+            },
+            "group": "",
+            "background": "",
+            "media": {
+                "caption": "",
+                "credit": "",
+                "thumbnail": "https://images.anandtech.com/doci/10610/7th%20Gen%20Intel%20Core_Briefing_final-08.png",
+                "url": "https://images.anandtech.com/doci/10610/7th%20Gen%20Intel%20Core_Briefing_final-08.png"
+            }
+        },
+        {
+            "start_date": {
+                "year": "2016",
+                "month": "8",
+                "day": "3"
+            },
+            "text": {
+                "headline": "TLB Side Channel Attack using TSX Disclosed",
+                "text": "<a href=\"https://www.blackhat.com/docs/us-16/materials/us-16-Jang-Breaking-Kernel-Address-Space-Layout-Randomization-KASLR-With-Intel-TSX.pdf\" target=\"_blank\">DrK: Breaking Kernel Address Space Layout Randomization with Intel TSX</a>"
+            },
+            "group": "",
+            "background": "",
+            "media": {
+                "caption": "",
+                "credit": "",
+                "thumbnail": "",
+                "url": ""
+            }
+        },
+        {
+            "start_date": {
+                "year": "2016",
+                "month": "6",
+                "day": ""
+            },
+            "text": {
+                "headline": "Control-flow Enforcement Technology Preview Released",
+                "text": "<a href=\"https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf\" target=\"_blank\">Control-flow Enforcement Technology Preview</a><p>* Shadow Stack<p>* Indirect Branch Tracking"
+            },
+            "group": "",
+            "background": "",
+            "media": {
+                "caption": "",
+                "credit": "",
+                "thumbnail": "https://i.imgur.com/fY4MrI5.png",
+                "url": "https://i.imgur.com/fY4MrI5.png"
+            }
+        },
+        {
+            "start_date": {
+                "year": "2017",
+                "month": "10",
+                "day": ""
+            },
+            "text": {
+                "headline": "Coffee Lake",
+                "text": "8th generation core"
+            },
+            "group": "",
+            "background": "",
+            "media": {
+                "caption": "",
+                "credit": "",
+                "thumbnail": "https://simplecore.intel.com/newsroom/wp-content/uploads/sites/11/2017/09/8th-Gen-Intel-Core-S-series-Chip.jpg",
+                "url": "https://images.anandtech.com/doci/11869/8th-gen-intel-core-overview_06_575px.png"
+            }
+        },
+        {
+            "start_date": {
+                "year": "2017",
+                "month": "10",
+                "day": ""
+            },
+            "text": {
+                "headline": "GCC 8 introduced CET code generation",
+                "text": "<a href=\"https://www.phoronix.com/scan.php?page=news_item&px=Intel-CET-GCC-8-Landing\" target=\"_blank\">Control-Flow Enforcement Technology Begins To Land In GCC 8</a>"
+            },
+            "group": "",
+            "background": "",
+            "media": {
+                "caption": "",
+                "credit": "",
+                "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Tux.png"
+            }
+        },
+        {
+            "start_date": {
+                "year": "2017",
+                "month": "12",
+                "day": ""
+            },
+            "text": {
+                "headline": "Memory Encryption Technologies Specification Released",
+                "text": "<p><a href=\"Intel® Architecture Memory Encryption Technologies Specification \" target=\"_blank\">https://software.intel.com/sites/default/files/managed/a5/16/Multi-Key-Total-Memory-Encryption-Spec.pdf</a><p><a href=\"https://www.lfasiallc.com/wp-content/uploads/2017/11/Runtime-VM-Protection-By-Intel-Multiple-Key-Total-Memory-Encryption_Kai-Huang.pdf\" target=\"_blank\">Runtime VM Protection By Intel® Multi-Key Total Memory Encryption (MKTME)</a>"
+            },
+            "group": "",
+            "background": "",
+            "media": {
+                "caption": "",
+                "credit": "",
+                "thumbnail": "https://i.imgur.com/J19SZW9.png",
+                "url": "https://i.imgur.com/J19SZW9.png"
+            }
+        },
+        {
+            "start_date": {
+                "year": "2018",
+                "month": "1",
+                "day": ""
+            },
+            "text": {
+                "headline": "Meltdown and Spectre Attacks Disclosed",
+                "text": "<p><a href=\"https://meltdownattack.com/\" target=\"_blank\">Meltdown and Spectre</a>"
+            },
+            "group": "",
+            "background": "",
+            "media": {
+                "caption": "",
+                "credit": "",
+                "thumbnail": "https://meltdownattack.com/images/spectre.min.svg",
+                "url": "https://meltdownattack.com/images/meltdown.min.svg"
+            }
+        },
+        {
+            "start_date": {
+                "year": "2018",
+                "month": "1",
+                "day": "4"
+            },
+            "text": {
+                "headline": "Retpoline and KPTI mitigation details disclosed",
+                "text": "<p><a href=\"https://security.googleblog.com/2018/01/more-details-about-mitigations-for-cpu_4.html\" target=\"_blank\">More details about mitigations for the CPU Speculative Execution issue</a>"
+            },
+            "group": "",
+            "background": "",
+            "media": {
+                "caption": "",
+                "credit": "",
+                "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1920px-Google_2015_logo.svg.png",
+                "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1920px-Google_2015_logo.svg.png"
+            }
+        },
+        {
+            "start_date": {
+                "year": "2018",
+                "month": "5",
+                "day": "29"
+            },
+            "text": {
+                "headline": "CET code is noticed in Windows 10 RS5",
+                "text": "<p><a href=\"https://twitter.com/aionescu/status/1001497700179763202\" target=\"_blank\">CET is coming in RS5 ;-)</a>"
+            },
+            "group": "",
+            "background": "",
+            "media": {
+                "caption": "",
+                "credit": "",
+                "thumbnail": "",
+                "url": ""
+            }
+        },
+        {
+            "start_date": {
+                "year": "2018",
+                "month": "12"
+            },
+            "text": {
+                "headline": "Retpoline mitigation rolling out to Windows 10 preview",
+                "text": "<p><a href=\"https://techcommunity.microsoft.com/t5/Windows-Kernel-Internals/Mitigating-Spectre-variant-2-with-Retpoline-on-Windows/ba-p/295618\" target=\"_blank\">Mitigating Spectre variant 2 with Retpoline on Windows</a>"
+            },
+            "group": "",
+            "background": "",
+            "media": {
+                "caption": "",
+                "credit": "",
+                "thumbnail": "",
+                "url": ""
+            }
+        },
+        {
+            "start_date": {
+                "year": "2019",
+                "month": "2"
+            },
+            "text": {
+                "headline": "Retpoline mitigation rolling out to Windows 10 releases",
+                "text": "<p><a href=\"https://www.zdnet.com/article/microsoft-rolls-out-googles-retpoline-spectre-mitigation-to-windows-10-users/\" target=\"_blank\">Microsoft rolls out Google's Retpoline Spectre mitigation to Windows 10 users</a>"
+            },
+            "group": "",
+            "background": "",
+            "media": {
+                "caption": "",
+                "credit": "",
+                "thumbnail": "https://zdnet3.cbsistatic.com/hub/i/2019/03/02/1ce9aaa6-3160-42d9-a9ff-4535c592e447/e462f7b7c78a0aa0d59e1168a8b0bb6f/windows-update-retpoline.png",
+                "url": "https://zdnet3.cbsistatic.com/hub/i/2019/03/02/1ce9aaa6-3160-42d9-a9ff-4535c592e447/e462f7b7c78a0aa0d59e1168a8b0bb6f/windows-update-retpoline.png"
+            }
+        }
+    ]
+}
