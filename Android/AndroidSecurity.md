@@ -5,8 +5,6 @@ RKP call entry: rkp _call()
 config KERNEL_TEXT_RDONLY
  - Data Section NX
 
-PXN - Privileged eXecute Never - mitigate ret2user
-
 ### KNOX 2.8
  * Control Flow Protection
  
@@ -25,4 +23,3 @@ PXN - Privileged eXecute Never - mitigate ret2user
 global variable ss_initialized (writable) -> 0
     All labels will reset to non except kernel domain
 Can load customized policy and reinitiaze SELinux
-
