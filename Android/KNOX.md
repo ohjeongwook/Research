@@ -29,7 +29,9 @@
 
  Reference: [Real-time Kernel Protection (RKP)](https://www.samsungknox.com/en/blog/real-time-kernel-protection-rkp)
 
-### [KDFI](KDFI.md)
+### KDFI
+
+Details: [KDFI](KDFI.md)
 
 ## Secure Boot (v2.4 ~ )
   * Secure Boot is a security mechanism that prevents unauthorized boot loaders and kernels from being loaded during the startup process.  Firmware images, such as operating systems and system components, cryptographically signed by known, trusted authorities, are considered authorized firmware.
