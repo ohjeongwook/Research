@@ -1,5 +1,6 @@
 # KDFI: Kernel Data Control Flow Integrity
   * Protects important kernel data structures
+  * KNOX 2.6 ~
 
 ## Kernel object protection
 
@@ -9,22 +10,26 @@
    tsec_jar: securitycontext
    vfsmnt_cache: struct vfsmount
 
-## Kernel object protection
-   cred_jar_ro -> rkp_override_creds()
+## Bypasses - cred_jar_ro
 
-## Fix
+1. Manipulate credentials and security context in kernel mode
+2. Point current credential to init_cred
+3. Call rkp_override_creds() to ask secure world to help us override credential with uid 0~1000
 
-* Unprivileged process(uid>1000) cannot override the credential with high privilege(uid 0~1000)
-
-## Reusing Init's Credentials
+### Reusing Init's Credentials
 
 current -> struct cred * -> init_cred (reusing init's credentials)
 
 S7: Data Flow Integrity
 
-## Data Flow Integrity
-KNOX 2.6
+### Kernel object protection
+   cred_jar_ro -> rkp_override_creds()
+   
+#### Fix
 
+* Unprivileged process(uid>1000) cannot override the credential with high privilege(uid 0~1000)
+
+## Data Flow Integrity
 * Linux Kernel: security_integrity_current()
    * Verifies process's credential in real-time
      * current struct cred{} and struct task_security_struct{} are allocated in RO page
