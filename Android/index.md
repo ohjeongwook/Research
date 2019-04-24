@@ -41,5 +41,5 @@ Mitigation: TIMA RKP (2016 ~ )
 
 
 # Android Kernel/TZ-based Mitigations
-## [AndroidKernelMitigations](AndroidKernelMitigations.md)
+## [Android Kernel Mitigations](AndroidKernelMitigations.md)
 ## [KNOX Mitigations](KNOX.md)
