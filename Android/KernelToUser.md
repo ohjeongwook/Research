@@ -5,31 +5,9 @@
 
 [Exploit Methods/Userspace execution](https://kernsec.org/wiki/index.php/Exploit_Methods/Userspace_execution)
 
-## PXN (Privilege eXecute Never)
-### PXN
 
-* Make userspace non-executable for the kernel
-
-### Supported Platforms - ARM
-
-* ARM v7 (32-bit) LPAE (e.g. Cortex-A7, A15+)
-   * hardware PXN (since Linux v3.19)
-
-* v8.0+ (64-bit)
-   * hardware PXN
-
-[ARM Feature](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.den0024a/BABCEADG.html)
-   
-### PXN: Privilege Execute Never
-
-* Android release 5.x
-   * Privileged eXecute Never (PXN) [3]: Disallow the kernel from executing userspace. Prevents ‘ret2user’ style attacks.
-
-[The Android Platform Security Model](https://arxiv.org/pdf/1904.05572.pdf)
 
 ## PXN Bypasses
-
-
 
 ## ROP/JOP to bypass PXN (2015 Keen team & wooyun)
 

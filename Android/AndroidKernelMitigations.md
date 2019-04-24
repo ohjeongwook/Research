@@ -1,7 +1,29 @@
-# Android Mitigations
+# Android Kernel Mitigations
 
-## PXN
-Details: [PXN](KernelToUser.md#PXN)
+## PXN (Privilege eXecute Never)
+
+* Make userspace non-executable for the kernel
+
+### Supported Platforms - ARM
+
+* ARM v7 (32-bit) LPAE (e.g. Cortex-A7, A15+)
+   * hardware PXN (since Linux v3.19)
+
+* v8.0+ (64-bit)
+   * hardware PXN
+
+[ARM Feature](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.den0024a/BABCEADG.html)
+   
+### Supported Versions
+
+* Android release 5.x
+   * Privileged eXecute Never (PXN) [3]: Disallow the kernel from executing userspace. Prevents ‘ret2user’ style attacks.
+
+[The Android Platform Security Model](https://arxiv.org/pdf/1904.05572.pdf)
+
+### Bypasses
+
+Known bypasses are documented here: [Kernel To User](KernelToUser.md)
 
 ## KCFI: Kernel Control Flow Integrity
 
