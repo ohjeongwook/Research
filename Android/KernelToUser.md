@@ -5,11 +5,9 @@
 
 [Exploit Methods/Userspace execution](https://kernsec.org/wiki/index.php/Exploit_Methods/Userspace_execution)
 
-
-
 ## PXN Bypasses
 
-## ROP/JOP to bypass PXN (2015 Keen team & wooyun)
+### ROP/JOP to bypass PXN (2015 Keen team & wooyun)
 
 * CVE-2015-3636
 
