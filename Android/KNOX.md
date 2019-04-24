@@ -13,17 +13,13 @@
 
  Reference: [Real-time Kernel Protection (RKP)](https://www.samsungknox.com/en/blog/real-time-kernel-protection-rkp)
 
-## Realtime Kernel Protection (RKP)
+* RKP call entry: rkp_call()
 
 * RKP runs in the virtualization protected environment rather than TrustZone Secure World
 
  Reference: [Real-time Kernel Protection (RKP)](https://www.samsungknox.com/en/blog/real-time-kernel-protection-rkp)
 
-## Realtime Kernel Protection (RKP)
-
 ![rkp_0](https://cdn.samsungknox.com/knoxportal/files/rkp_0.png "rkp_0")
-
-## Realtime Kernel Protection (RKP)
 
 * RKP ensures that translation tables cannot be modified by the Normal World through making them read-only to the Normal World kernel. Hence, the only way for the kernel to update the translation tables is to request these updates from RKP. As a result, RKP guarantees that this interception is non-bypassable.
 
