@@ -34,6 +34,7 @@ Known bypasses are documented here: [Kernel To User](KernelToUser.md)
 
 ### Patches
 
-[Version 4.9](https://android-review.googlesource.com/q/topic:android-4.9-cfi)
-[Version 4.14](https://android-review.googlesource.com/q/topic:android-4.14-cfi)
+* [Version 4.9](https://android-review.googlesource.com/q/topic:android-4.9-cfi)
+* [Version 4.14](https://android-review.googlesource.com/q/topic:android-4.14-cfi)
+
   
