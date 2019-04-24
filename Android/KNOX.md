@@ -1,12 +1,13 @@
 # Samsung KNOX Feature
 
-* Realtime Kernel Protection (RKP) (v2.4 ~ )
-* Secure Boot (v2.4 ~ )
-* Kernel address space layout randomization (v2.6 ~ )
-* Protection from JOP exploits (v2.7 ~ )
-* Protection from ROP exploits (v2.8 ~ )
+| Version | Time | Name | Description |
+| :----- | :--- | :--- | :---------- |
+| [v2.4.1](https://seap.samsung.com/content/whats-new-knox-241) | Jul 2015 | Secure Boot, RKP(?) | It is believed RKP introduced with KNOX 2.4. RKP is a TZ-based security suite |
+| [v2.6](https://www.samsungknox.com/en/blog/whats-new-in-knox-26) | Feb 2016 | Enhanced Real Time Kernel Protection (RKP), Kernel address space layout randomization | kASLR makes kernel exploit difficult by randomizing kernel memory layout |
+| [v2.7](https://seap.samsung.com/content/whats-new-knox-271) | | JOPP (Jump Oriented Programming Protection)  | Protection from JOP exploits |
+| [v2.8](https://www.samsungknox.com/en/blog/whats-new-in-knox-28) | April 2017 | Control Flow Protection, Protection from ROP exploits | kCFI will prevent exploiting memory corruption vulnerability challenging by eliminating usable pointer corruption points. |
 
- Reference: [Knox features on Android](https://www.samsungknox.com/en/knox-features/android)
+* Reference: [Knox features on Android](https://www.samsungknox.com/en/knox-features/android)
 
 ## Realtime Kernel Protection (RKP) (v2.4 ~ )
   * RKP prevents running unauthorized privileged code on the system and kernel data from being directly accessed by user processes.  Also, it monitors some critical kernel data structures to verify that they are not exploited by attacks.
@@ -48,11 +49,10 @@ Details: [KDFI](KDFI.md)
 
  Reference: [Defeating Samsung KNOX with zero privilege](https://www.blackhat.com/docs/us-17/thursday/us-17-Shen-Defeating-Samsung-KNOX-With-Zero-Privilege.pdf)
 
-## Protection from JOP exploits (v2.7 ~ )
+## JOPP (Jump Oriented Programming Protection) (v2.7 ~ )
 
 * Knox now prevents Jump-Oriented Programming (JOP) attacks, such as those enabled by the Ping Pong APK. JOP attacks use jump instructions to control, or modify, the kernel flow and modify system-critical data.
 
-* JOPP: Jump Oriented Programming Protection
 
 ## Protection from ROP exploits (v2.8 ~ )
 

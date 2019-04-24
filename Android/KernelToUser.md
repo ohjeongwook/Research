@@ -28,6 +28,14 @@
 [The Android Platform Security Model](https://arxiv.org/pdf/1904.05572.pdf)
 
 ## PXN Bypasses
+
+
+
+## ROP/JOP to bypass PXN (2015 Keen team & wooyun)
+
+* CVE-2015-3636
+
+
 ### call_usermodehelper bypass
 * call_usermodehelper(path,argv,envp,wait)
    * via ptmx_fops->check_flags(flag)
@@ -48,7 +56,6 @@ int​ call_usermodehelper​ (const​ ​ char​ ​ *​ ​ path,
 ### orderly_poweroff​ Bypass
 
 * [Exploiting BlueBorne in Linux-based IoT devices](https://go.armis.com/hubfs/ExploitingBlueBorneLinuxBasedIoTDevices.pdf) - 2017
-
 * [Exploiting BlueBorne in Linux-based IoT devices - WP](https://www.blackhat.com/docs/eu-17/materials/eu-17-Seri-BlueBorne-A-New-Class-Of-Airborne-Attacks-Compromising-Any-Bluetooth-Enabled-Linux-IoT-Device-wp.pdf) - 2017
 
 
