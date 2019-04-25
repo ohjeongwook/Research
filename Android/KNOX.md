@@ -26,15 +26,13 @@
 
 Reference: [Real-time Kernel Protection (RKP)](https://www.samsungknox.com/en/blog/real-time-kernel-protection-rkp)
 
-* [KDFI](KDFI.md)
-
 ### Kernel Data Overwrite
 
-* FPT(Function Pointer Table) overwrite
-   * ptmx_fops->fsync(~ 2008)
-   * dev_attr_ro->show (levitator, 2011 ~ )
+#### FPT(Function Pointer Table) overwrite
+* ptmx_fops->fsync(~ 2008)
+* dev_attr_ro->show (levitator, 2011 ~ )
 
-## thread_info->addr_limit Corruption 
+#### thread_info->addr_limit Corruption 
 
 * [The Stack is Back](https://jon.oberheide.org/files/infiltrate12-thestackisback.pdf) - 2012
 * [geohot's towelroot](https://towelroot.com/) - 2014
@@ -42,13 +40,10 @@ Reference: [Real-time Kernel Protection (RKP)](https://www.samsungknox.com/en/bl
 
 * From [Exploiting the Futex Bug and uncovering Towelroot](https://tinyhack.com/2014/07/07/exploiting-the-futex-bug-and-uncovering-towelroot/) - Jul 2014
 
-```
-The addr_limit is a nice target for overwrite. The default value for ARM is 3204448256 (0xbf000000), this value is checked in every operation in kernel that copy values from and to user space. 
+   > The addr_limit is a nice target for overwrite. The default value for ARM is 3204448256 (0xbf000000), this value is checked in every operation in kernel that copy values from and to user space. 
+   > If we can somehow increase this limit, we can then read and modify kernel structures (using read/write syscall). Using a list manipulation, we can overwrite an address, and the location of addr_limit the one we want to overwrite.
 
-If we can somehow increase this limit, we can then read and modify kernel structures (using read/write syscall). Using a list manipulation, we can overwrite an address, and the location of addr_limit the one we want to overwrite.
-```
-   
-* Mitigation: RKP (2016 ~ )
+### [KDFI](KDFI.md)
 
 ## Secure Boot (v2.4 ~ )
 * Secure Boot is a security mechanism that prevents unauthorized boot loaders and kernels from being loaded during the startup process.  Firmware images, such as operating systems and system components, cryptographically signed by known, trusted authorities, are considered authorized firmware.
