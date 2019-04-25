@@ -1,8 +1,23 @@
 # Android Kernel Mitigations
 
+## Kernel memory leak
+
+/proc/(kallsyms, modules, slabinfo)
+/sys
+
+## Kernel +X Memory Overwrite
+
+2012 [exynosabuse](https://golos.io/book/@mestn1k/gaining-root-on-a-booted-system) (alephzain): Overwrite setresuid syscall
+
+Mitigation: PKM (Periodic Kernel Measurement): KK (32), KAP (64)
+
 ## PXN (Privilege eXecute Never)
 
 * Make userspace non-executable for the kernel
+
+### Purpose of Android exploits
+
+* Run shellcode in userland memory - usually change current user's uid/guid (in PCB - task_struct) using shellcode
 
 ### Supported Platforms - ARM
 

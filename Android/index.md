@@ -15,31 +15,6 @@
 
 * [Security Enhancements in Android 1.5 through 4.1](https://source.android.com/security/enhancements/enhancements41) |
 
-## Kernel memory leak
-
-/proc/(kallsyms, modules, slabinfo)
-/sys
-
-## Kernel +X Memory Overwrite
-2012 [exynosabuse](https://golos.io/book/@mestn1k/gaining-root-on-a-booted-system) (alephzain): Overwrite setresuid syscall
-
-Mitigation: TIMA PKM (Periodic Kernel Measurement): KK (32), KAP (64)
-
-## Kernel Data Overwrite
-
-* FPT(Function Pointer Table) overwrite
-   * ptmx_fops->fsync(~ 2008)
-   * dev_attr_ro->show (levitator, 2011 ~ )
-   
-Mitigation: TIMA RKP (2016 ~ )
-
-## ret2user
-
-* Run shellcode in userland memory - usually change current user's uid/guid (in PCB - task_struct) using shellcode
-
-## thread_info->addr_limit Corruption (2014 geohot's towelroot)
-
-
 # Android Kernel/TZ-based Mitigations
 ## [Android Kernel Mitigations](AndroidKernelMitigations.md)
 ## [KNOX Mitigations](KNOX.md)
