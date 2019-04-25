@@ -13,10 +13,11 @@
 
 
 ### call_usermodehelper bypass
-* call_usermodehelper(path,argv,envp,wait)
-   * via ptmx_fops->check_flags(flag)
+
+* ptmx_fops->check_flags(flag) --> call_usermodehelper(path,argv,envp,wait)
 
 * user-mode​​ helper: run user mode commands from kernel
+
 ```
 int​ call_usermodehelper​ (const​ ​ char​ ​ *​ ​ path,
     char​ ​ **​ ​ argv,
@@ -24,16 +25,21 @@ int​ call_usermodehelper​ (const​ ​ char​ ​ *​ ​ path,
     int​ ​ wait); 
 ```
 
-#### References
+* [Defeating Samsung KNOX
+with zero privilege](https://www.blackhat.com/docs/us-17/thursday/us-17-Shen-Defeating-Samsung-KNOX-With-Zero-Privilege-wp.pdf)
 
 * [New Reliable Android Kernel Root Exploitation Techniques](http://powerofcommunity.net/poc2016/x82.pdf) - 2016
    p. 24 ~ 31
    
 ### orderly_poweroff​ Bypass
 
+This method was mentioned by the following papers.
+
+* [Defeating Samsung KNOX
+with zero privilege](https://www.blackhat.com/docs/us-17/thursday/us-17-Shen-Defeating-Samsung-KNOX-With-Zero-Privilege-wp.pdf)
 * [Exploiting BlueBorne in Linux-based IoT devices](https://go.armis.com/hubfs/ExploitingBlueBorneLinuxBasedIoTDevices.pdf) - 2017
 * [Exploiting BlueBorne in Linux-based IoT devices - WP](https://www.blackhat.com/docs/eu-17/materials/eu-17-Seri-BlueBorne-A-New-Class-Of-Airborne-Attacks-Compromising-Any-Bluetooth-Enabled-Linux-IoT-Device-wp.pdf) - 2017
-
+* [New Reliable Android Kernel Root Exploitation Techniques](http://powerofcommunity.net/poc2016/x82.pdf) - 2016
 
 #### run_cmd
 

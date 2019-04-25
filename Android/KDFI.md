@@ -30,12 +30,14 @@ S7: Data Flow Integrity
 * Unprivileged process(uid>1000) cannot override the credential with high privilege(uid 0~1000)
 
 ## Data Flow Integrity
+
 * Linux Kernel: security_integrity_current()
    * Verifies process's credential in real-time
      * current struct cred{} and struct task_security_struct{} are allocated in RO page
      * cred->bp_task is owned by current process
      * task_security->bp_cred is owned by current cred
      * current mount namespace is not malformed
+
 * Secure World: Integrity_checking()
 
 ## Data Flow Integrity
